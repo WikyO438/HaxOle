@@ -1,95 +1,38 @@
 ```html
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Artículo - HAXOLÉ</title>
+<title>Noticia - HaxOlé</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
 body{
-background:linear-gradient(135deg,#0f172a,#1e293b);
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#000;
 color:white;
-min-height:100vh;
-display:flex;
-flex-direction:column;
 }
-
-/* HEADER */
 
 header{
-background:#020617;
+background:linear-gradient(to right,#6bb6e8,#cfcfcf);
 padding:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
-.titulo{
-display:flex;
-align-items:center;
-gap:15px;
-font-size:32px;
-font-weight:bold;
-text-decoration:none;
-color:white;
+header h1{
+margin:0;
+color:black;
 }
-
-.logo{
-width:45px;
-transition:0.4s;
-}
-
-.logo:hover{
-transform:rotate(10deg) scale(1.1);
-}
-
-/* CONTENIDO */
 
 main{
+padding:40px;
 max-width:800px;
 margin:auto;
-padding:60px 20px;
 }
 
-h1{
-font-size:36px;
-margin-bottom:20px;
-}
-
-p{
-font-size:18px;
-line-height:1.7;
-margin-bottom:20px;
-opacity:0.9;
-}
-
-.boton{
-display:inline-block;
-margin-top:20px;
-background:#3b82f6;
-color:white;
-padding:12px 25px;
-border-radius:10px;
+a{
+color:#3b82f6;
 text-decoration:none;
-transition:0.3s;
-}
-
-.boton:hover{
-background:#2563eb;
-}
-
-footer{
-text-align:center;
-padding:25px;
-opacity:0.6;
 }
 
 </style>
@@ -98,36 +41,30 @@ opacity:0.6;
 <body>
 
 <header>
-
-<a href="index.html" class="titulo">
-<img src="logo.png" class="logo">
-HAXOLÉ
+<a href="index.html" style="text-decoration:none; color:inherit;">
+<h1>HaxOlé</h1>
 </a>
-
 </header>
 
 <main>
 
-<h1>Primera noticia</h1>
+<h2>Primera noticia</h2>
 
 <p>
-Bienvenido a la primera noticia del sitio HAXOLÉ.
-Aquí podrás publicar artículos, novedades y contenido interesante.
+Bienvenido a la primera noticia del sitio HaxOlé.
+Aquí puedes escribir el contenido de tu artículo.
 </p>
 
 <p>
-Este es un ejemplo de artículo. Puedes editar este texto y agregar todo el contenido que quieras.
+Puedes agregar más texto, imágenes o información
+sobre lo que quieras publicar.
 </p>
 
-<a href="index.html" class="boton">
-← Volver al inicio
-</a>
+<br>
+
+<a href="index.html">← Volver al inicio</a>
 
 </main>
-
-<footer>
-© 2026 HAXOLÉ
-</footer>
 
 </body>
 </html>
