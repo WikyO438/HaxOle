@@ -1,71 +1,129 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Noticia - HaxOlé</title>
+
+<title>Artículo - HaxOlé</title>
 
 <style>
 
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#000;
+font-family:Arial;
+background:#111;
 color:white;
+margin:0;
 }
 
 header{
-background:linear-gradient(to right,#6bb6e8,#cfcfcf);
+background:linear-gradient(90deg,#6ec6ff,#ffffff);
 padding:20px;
 }
 
-header h1{
-margin:0;
+.logo{
+font-size:40px;
+font-weight:bold;
 color:black;
 }
 
-main{
-padding:40px;
-max-width:800px;
+.article{
+width:70%;
 margin:auto;
+margin-top:40px;
 }
 
-a{
-color:#3b82f6;
-text-decoration:none;
+.article img{
+width:100%;
+border-radius:6px;
+}
+
+.comments{
+margin-top:50px;
+}
+
+textarea{
+width:100%;
+height:100px;
+}
+
+button{
+padding:10px 20px;
+margin-top:10px;
+}
+
+.comment{
+background:#1c1c1c;
+padding:10px;
+margin-top:10px;
+border-radius:5px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-<a href="index.html" style="text-decoration:none; color:inherit;">
-<h1>HaxOlé</h1>
-</a>
+
+<div class="logo">HaxOlé</div>
+
 </header>
 
-<main>
+<div class="article">
 
-<h2>Primera noticia</h2>
+<img src="https://i.imgur.com/7YyZ6kP.png">
 
-<p>
-Bienvenido a la primera noticia del sitio HaxOlé.
-Aquí puedes escribir el contenido de tu artículo.
-</p>
+<h1>Dream Tin gana la final de la Hax League</h1>
 
 <p>
-Puedes agregar más texto, imágenes o información
-sobre lo que quieras publicar.
+
+Dream Tin se consagró campeón tras un partido histórico
+contra Hax Legends.
+
+El encuentro terminó 3-2 y fue seguido por cientos de
+espectadores en la comunidad de Haxball.
+
 </p>
 
-<br>
+<div class="comments">
 
-<a href="index.html">← Volver al inicio</a>
+<h2>Comentarios</h2>
 
-</main>
+<textarea id="commentInput"></textarea>
+
+<button onclick="addComment()">Comentar</button>
+
+<div id="commentList"></div>
+
+</div>
+
+</div>
+
+<script>
+
+function addComment(){
+
+let input=document.getElementById("commentInput");
+
+let comment=input.value;
+
+if(comment==="") return;
+
+let div=document.createElement("div");
+
+div.className="comment";
+
+div.innerText=comment;
+
+document.getElementById("commentList").appendChild(div);
+
+input.value="";
+
+}
+
+</script>
 
 </body>
 </html>
-```
