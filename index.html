@@ -22,6 +22,7 @@ body{
 font-family:Roboto;
 background:#0f0f0f;
 color:white;
+line-height:1.6;
 }
 
 /* HEADER */
@@ -31,7 +32,7 @@ background:linear-gradient(90deg,#6ec6ff,#ffffff);
 position:sticky;
 top:0;
 z-index:100;
-box-shadow:0 3px 10px rgba(0,0,0,0.3);
+box-shadow:0 3px 15px rgba(0,0,0,0.4);
 }
 
 .header-container{
@@ -44,15 +45,22 @@ padding:15px 0;
 }
 
 .logo{
+display:flex;
+align-items:center;
+gap:12px;
 font-family:"Bebas Neue";
-font-size:42px;
+font-size:40px;
 letter-spacing:2px;
 color:#111;
 transition:0.3s;
 }
 
+.logo img{
+width:40px;
+}
+
 .logo:hover{
-transform:scale(1.1);
+transform:scale(1.05);
 cursor:pointer;
 }
 
@@ -71,14 +79,13 @@ transition: all 0.25s ease;
 nav a:hover{
 background:#e6f4ff;
 transform:scale(1.15);
-color:#000;
 }
 
 /* HERO */
 
 .hero{
 width:90%;
-margin:30px auto;
+margin:35px auto;
 display:grid;
 grid-template-columns:2fr 1fr;
 gap:25px;
@@ -86,20 +93,26 @@ gap:25px;
 
 .hero-main{
 position:relative;
+overflow:hidden;
+border-radius:8px;
 }
 
 .hero-main img{
 width:100%;
-border-radius:6px;
+transition:0.4s;
+}
+
+.hero-main:hover img{
+transform:scale(1.05);
 }
 
 .hero-text{
 position:absolute;
 bottom:20px;
 left:20px;
-background:rgba(0,0,0,0.7);
-padding:15px;
-border-radius:5px;
+background:rgba(0,0,0,0.75);
+padding:18px;
+border-radius:6px;
 }
 
 .hero-text h2{
@@ -115,7 +128,12 @@ gap:20px;
 .side-card{
 background:#1c1c1c;
 padding:10px;
-border-radius:6px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.side-card:hover{
+transform:translateY(-5px);
 }
 
 .side-card img{
@@ -144,7 +162,7 @@ transition:0.3s;
 }
 
 .section-title:hover{
-transform:translateX(5px);
+transform:translateX(6px);
 }
 
 /* NOTICIAS */
@@ -157,34 +175,28 @@ gap:20px;
 
 .news-card{
 background:#1c1c1c;
-border-radius:6px;
+border-radius:8px;
 overflow:hidden;
-transition: all 0.25s ease;
+transition:0.3s;
 cursor:pointer;
-
-opacity:0;
-transform:translateY(20px);
-animation:fadeIn 0.8s forwards;
-}
-
-.news-card:hover{
-transform:translateY(-8px) scale(1.02);
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 .news-card img{
 width:100%;
+transition:0.4s;
+}
+
+.news-card:hover img{
+transform:scale(1.08);
+}
+
+.news-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
 
 .news-content{
 padding:15px;
-}
-
-@keyframes fadeIn{
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 /* MATCH CENTER */
@@ -199,7 +211,12 @@ margin-top:20px;
 .match-box{
 background:#1c1c1c;
 padding:20px;
-border-radius:6px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.match-box:hover{
+transform:scale(1.03);
 }
 
 /* STREAM */
@@ -207,7 +224,7 @@ border-radius:6px;
 .stream-box{
 background:#1c1c1c;
 padding:20px;
-border-radius:6px;
+border-radius:8px;
 margin-top:20px;
 }
 
@@ -216,12 +233,16 @@ margin-top:20px;
 .sidebar{
 background:#151515;
 padding:20px;
-border-radius:6px;
-height:fit-content;
+border-radius:8px;
 }
 
-.sidebar h3{
+.sidebar p{
 margin-bottom:10px;
+transition:0.2s;
+}
+
+.sidebar p:hover{
+transform:translateX(5px);
 }
 
 /* DISCORD */
@@ -230,16 +251,22 @@ margin-bottom:10px;
 margin-top:30px;
 background:#5865F2;
 padding:30px;
-border-radius:6px;
+border-radius:8px;
 text-align:center;
 }
 
 .discord button{
 margin-top:10px;
-padding:10px 25px;
+padding:12px 30px;
 border:none;
 font-weight:bold;
 cursor:pointer;
+border-radius:6px;
+transition:0.3s;
+}
+
+.discord button:hover{
+transform:scale(1.1);
 }
 
 /* FOOTER */
@@ -279,9 +306,16 @@ grid-template-columns:1fr;
 
 <div class="header-container">
 
-<div class="logo">HaxOlé</div>
+<div class="logo">
+
+<img src="logo.png">
+
+HaxOlé
+
+</div>
 
 <nav>
+
 <a href="#">Noticias</a>
 <a href="#">Partidos</a>
 <a href="#">Ligas</a>
@@ -289,6 +323,7 @@ grid-template-columns:1fr;
 <a href="#">Opinión</a>
 <a href="#">Comunidad</a>
 <a href="#">Streams</a>
+
 </nav>
 
 </div>
@@ -302,8 +337,11 @@ grid-template-columns:1fr;
 <img src="https://i.imgur.com/7YyZ6kP.png">
 
 <div class="hero-text">
-<h2>Dream Tin gana la final de la Bronce Cup</h2>
+
+<h2>Dream Tin gana la final de la Hax League</h2>
+
 <p>El equipo se consagra campeón tras un partido histórico.</p>
+
 </div>
 
 </div>
@@ -311,13 +349,19 @@ grid-template-columns:1fr;
 <div class="hero-side">
 
 <div class="side-card">
+
 <img src="https://i.imgur.com/7YyZ6kP.png">
+
 <p>Top 10 goles de la semana</p>
+
 </div>
 
 <div class="side-card">
+
 <img src="https://i.imgur.com/7YyZ6kP.png">
+
 <p>Entrevista con los campeones</p>
+
 </div>
 
 </div>
@@ -333,27 +377,45 @@ grid-template-columns:1fr;
 <div class="news-grid">
 
 <div class="news-card" onclick="location.href='articulo.html'">
+
 <img src="https://i.imgur.com/7YyZ6kP.png">
+
 <div class="news-content">
+
 <h3>Nuevo torneo internacional</h3>
+
 <p>Equipos de toda Latinoamérica participarán.</p>
+
 </div>
+
 </div>
 
 <div class="news-card" onclick="location.href='articulo.html'">
+
 <img src="https://i.imgur.com/7YyZ6kP.png">
+
 <div class="news-content">
+
 <h3>Ranking de jugadores</h3>
+
 <p>Los mejores jugadores del mes.</p>
+
 </div>
+
 </div>
 
 <div class="news-card" onclick="location.href='articulo.html'">
+
 <img src="https://i.imgur.com/7YyZ6kP.png">
+
 <div class="news-content">
+
 <h3>Guía para mejorar</h3>
+
 <p>Consejos para subir tu nivel.</p>
+
 </div>
+
 </div>
 
 </div>
@@ -366,7 +428,7 @@ grid-template-columns:1fr;
 
 <h3>Resultados</h3>
 
-<p>Dream Tin 3 - 2 Hardy Boyz</p>
+<p>Dream Tin 3 - 2 Hax Legends</p>
 <p>Red Dragons 1 - 1 Elite Team</p>
 
 </div>
@@ -375,7 +437,7 @@ grid-template-columns:1fr;
 
 <h3>Próximos partidos</h3>
 
-<p>Dream Tin vs Swag United Team - 20:00</p>
+<p>Dream Tin vs Elite Team - 20:00</p>
 <p>Red Dragons vs Hax Kings - 21:30</p>
 
 </div>
@@ -400,7 +462,9 @@ allowfullscreen></iframe>
 <p>Participa en torneos y debates de Haxball.</p>
 
 <button onclick="window.location.href='https://discord.gg/F5gGSxed'">
+
 Entrar al Discord
+
 </button>
 
 </div>
