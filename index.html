@@ -1,42 +1,147 @@
 ```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
-<title>HaxOlé</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HAXOLÉ</title>
 
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
-background:#000;
-color:white;
 }
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* HEADER */
 
 header{
-background:linear-gradient(to right,#6bb6e8,#cfcfcf);
+width:100%;
+background:#020617;
 padding:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
-header h1{
-margin:0;
-color:black;
+.titulo{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+font-size:40px;
+font-weight:bold;
+letter-spacing:2px;
 }
+
+/* LOGO */
+
+.logo{
+width:55px;
+transition:0.4s;
+}
+
+.logo:hover{
+transform:rotate(10deg) scale(1.1);
+}
+
+/* CONTENIDO */
 
 main{
-padding:40px;
+max-width:900px;
+padding:60px 20px;
 text-align:center;
 }
 
+h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+p{
+font-size:18px;
+opacity:0.85;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+/* BOTON */
+
 .boton{
 display:inline-block;
-margin-top:20px;
-padding:12px 25px;
 background:#3b82f6;
 color:white;
+padding:14px 28px;
+border-radius:10px;
 text-decoration:none;
-border-radius:6px;
+font-size:18px;
+transition:0.3s;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+.boton:hover{
+background:#2563eb;
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* TARJETAS */
+
+.seccion{
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+.tarjeta{
+background:#0f172a;
+padding:25px;
+border-radius:15px;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+.tarjeta:hover{
+transform:translateY(-5px);
+background:#1e293b;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:auto;
+padding:25px;
+opacity:0.6;
+font-size:14px;
+}
+
+/* ANIMACION */
+
+.fade{
+animation:fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -45,25 +150,51 @@ border-radius:6px;
 <body>
 
 <header>
-<a href="index.html" style="text-decoration:none; color:inherit;">
-<h1>HaxOlé</h1>
-</a>
+
+<div class="titulo">
+<img src="logo.png" class="logo">
+HAXOLÉ
+</div>
+
 </header>
 
-<main>
+<main class="fade">
 
 <h2>Bienvenido</h2>
 
 <p>
-Este es el inicio del sitio HaxOlé.
-Aquí podrás leer noticias y artículos.
+Este es el sitio oficial de HAXOLÉ.  
+Aquí podrás encontrar artículos, proyectos y contenido interesante.
 </p>
 
-<a class="boton" href="articulo.html">
-Leer noticia
+<a href="articulo.html" class="boton">
+Leer artículo
 </a>
 
+<div class="seccion">
+
+<div class="tarjeta">
+<h3>🚀 Proyectos</h3>
+<p>Explora desarrollos y experimentos interesantes.</p>
+</div>
+
+<div class="tarjeta">
+<h3>📚 Artículos</h3>
+<p>Contenido informativo y educativo.</p>
+</div>
+
+<div class="tarjeta">
+<h3>💡 Ideas</h3>
+<p>Conceptos y proyectos en progreso.</p>
+</div>
+
+</div>
+
 </main>
+
+<footer>
+© 2026 HAXOLÉ
+</footer>
 
 </body>
 </html>
