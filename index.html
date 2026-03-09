@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>HAXOLÉ</title>
 
 <style>
@@ -23,13 +22,11 @@ color:white;
 min-height:100vh;
 display:flex;
 flex-direction:column;
-align-items:center;
 }
 
 /* HEADER */
 
 header{
-width:100%;
 background:#020617;
 padding:20px;
 box-shadow:0 5px 20px rgba(0,0,0,0.5);
@@ -38,17 +35,15 @@ box-shadow:0 5px 20px rgba(0,0,0,0.5);
 .titulo{
 display:flex;
 align-items:center;
-justify-content:center;
 gap:15px;
-font-size:40px;
+font-size:32px;
 font-weight:bold;
-letter-spacing:2px;
+text-decoration:none;
+color:white;
 }
 
-/* LOGO */
-
 .logo{
-width:55px;
+width:45px;
 transition:0.4s;
 }
 
@@ -60,6 +55,7 @@ transform:rotate(10deg) scale(1.1);
 
 main{
 max-width:900px;
+margin:auto;
 padding:60px 20px;
 text-align:center;
 }
@@ -71,12 +67,10 @@ margin-bottom:20px;
 
 p{
 font-size:18px;
-opacity:0.85;
+opacity:0.9;
 margin-bottom:30px;
 line-height:1.6;
 }
-
-/* BOTON */
 
 .boton{
 display:inline-block;
@@ -87,16 +81,12 @@ border-radius:10px;
 text-decoration:none;
 font-size:18px;
 transition:0.3s;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
 .boton:hover{
 background:#2563eb;
 transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
-
-/* TARJETAS */
 
 .seccion{
 margin-top:60px;
@@ -118,30 +108,10 @@ transform:translateY(-5px);
 background:#1e293b;
 }
 
-/* FOOTER */
-
 footer{
-margin-top:auto;
+text-align:center;
 padding:25px;
 opacity:0.6;
-font-size:14px;
-}
-
-/* ANIMACION */
-
-.fade{
-animation:fadeIn 1.2s ease;
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 </style>
@@ -151,41 +121,41 @@ transform:translateY(0);
 
 <header>
 
-<div class="titulo">
+<a href="index.html" class="titulo">
 <img src="logo.png" class="logo">
 HAXOLÉ
-</div>
+</a>
 
 </header>
 
-<main class="fade">
+<main>
 
 <h2>Bienvenido</h2>
 
 <p>
-Este es el sitio oficial de HAXOLÉ.  
-Aquí podrás encontrar artículos, proyectos y contenido interesante.
+Este es el sitio oficial de HAXOLÉ.
+Aquí encontrarás noticias, artículos y proyectos.
 </p>
 
 <a href="articulo.html" class="boton">
-Leer artículo
+Leer noticia
 </a>
 
 <div class="seccion">
 
 <div class="tarjeta">
 <h3>🚀 Proyectos</h3>
-<p>Explora desarrollos y experimentos interesantes.</p>
+<p>Explora desarrollos interesantes.</p>
 </div>
 
 <div class="tarjeta">
-<h3>📚 Artículos</h3>
-<p>Contenido informativo y educativo.</p>
+<h3>📰 Noticias</h3>
+<p>Lee las últimas novedades.</p>
 </div>
 
 <div class="tarjeta">
 <h3>💡 Ideas</h3>
-<p>Conceptos y proyectos en progreso.</p>
+<p>Conceptos y experimentos.</p>
 </div>
 
 </div>
