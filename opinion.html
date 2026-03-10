@@ -1,1 +1,96 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+<meta charset="UTF-8">
+<title>Opinión - HaxOlé</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f0f0f;
+color:white;
+margin:0;
+}
+
+header{
+background:linear-gradient(90deg,#6ec6ff,#ffffff);
+padding:20px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:40px;
+font-weight:bold;
+color:black;
+text-decoration:none;
+}
+
+.logo img{
+width:35px;
+}
+
+.container{
+width:80%;
+margin:auto;
+margin-top:40px;
+}
+
+.news{
+background:#1c1c1c;
+padding:20px;
+margin-bottom:20px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.news:hover{
+transform:scale(1.03);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">
+
+<img src="logo.png">
+HaxOlé
+
+</a>
+
+</header>
+
+<div class="container">
+
+<h1>Noticias</h1>
+
+<div class="news" onclick="location.href='articulo.html'">
+<h3>Dream Tin campeón de la Hax League</h3>
+<p>El equipo ganó una final histórica.</p>
+</div>
+
+<div class="news" onclick="location.href='articulo.html'">
+<h3>Nuevo torneo internacional</h3>
+<p>Participarán equipos de toda Latinoamérica.</p>
+</div>
+
+<div class="news" onclick="location.href='articulo.html'">
+<h3>Top goles de la semana</h3>
+<p>Las mejores jugadas del momento.</p>
+</div>
+
+</div>
+
+</body>
+</html>
+```
