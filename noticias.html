@@ -3,54 +3,174 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Noticias - HaxOlé</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-font-family:Arial;
+font-family:Roboto;
 background:#0f0f0f;
 color:white;
-margin:0;
 }
+
+/* HEADER */
 
 header{
 background:linear-gradient(90deg,#6ec6ff,#ffffff);
-padding:20px;
+padding:15px;
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
+font-family:"Bebas Neue";
 font-size:40px;
-font-weight:bold;
-color:black;
+color:#111;
 text-decoration:none;
+width:90%;
+margin:auto;
 }
 
 .logo img{
-width:35px;
+width:40px;
 }
+
+/* CONTENEDOR */
 
 .container{
-width:80%;
-margin:auto;
-margin-top:40px;
+width:90%;
+margin:30px auto;
 }
 
-.news{
-background:#1c1c1c;
+/* TITULO */
+
+.page-title{
+font-size:32px;
+margin-bottom:25px;
+border-left:6px solid red;
+padding-left:10px;
+}
+
+/* NOTICIA PRINCIPAL */
+
+.main-news{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:25px;
+margin-bottom:40px;
+}
+
+.main-article{
+position:relative;
+cursor:pointer;
+}
+
+.main-article img{
+width:100%;
+border-radius:8px;
+}
+
+.main-text{
+position:absolute;
+bottom:20px;
+left:20px;
+background:rgba(0,0,0,0.75);
 padding:20px;
-margin-bottom:20px;
 border-radius:6px;
+}
+
+.main-text h2{
+font-size:28px;
+}
+
+/* NOTICIAS LATERALES */
+
+.side-news{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.side-card{
+background:#1c1c1c;
+padding:10px;
+border-radius:8px;
 cursor:pointer;
 transition:0.3s;
 }
 
-.news:hover{
-transform:scale(1.03);
+.side-card:hover{
+transform:translateY(-4px);
+}
+
+.side-card img{
+width:100%;
+border-radius:6px;
+}
+
+/* GRID DE NOTICIAS */
+
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.news-card{
+background:#1c1c1c;
+border-radius:8px;
+overflow:hidden;
+cursor:pointer;
+transition:0.3s;
+}
+
+.news-card img{
+width:100%;
+}
+
+.news-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.news-content{
+padding:15px;
+}
+
+.news-content h3{
+margin-bottom:8px;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:50px;
+background:black;
+padding:20px;
+text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.main-news{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -72,24 +192,103 @@ HaxOlé
 
 <div class="container">
 
-<h1>Noticias</h1>
+<h1 class="page-title">Noticias</h1>
 
-<div class="news" onclick="location.href='articulo.html'">
-<h3>Dream Tin campeón de la Hax League</h3>
-<p>El equipo ganó una final histórica.</p>
+<!-- NOTICIA PRINCIPAL -->
+
+<div class="main-news">
+
+<div class="main-article" onclick="location.href='articulo.html'">
+
+<img src="https://i.imgur.com/7YyZ6kP.png">
+
+<div class="main-text">
+
+<h2>Dream Tin gana la Hax League</h2>
+
+<p>El equipo logra una victoria histórica en la final.</p>
+
 </div>
 
-<div class="news" onclick="location.href='articulo.html'">
+</div>
+
+<div class="side-news">
+
+<div class="side-card" onclick="location.href='articulo.html'">
+
+<img src="https://i.imgur.com/7YyZ6kP.png">
+
+<p>Top 10 goles de la semana</p>
+
+</div>
+
+<div class="side-card" onclick="location.href='articulo.html'">
+
+<img src="https://i.imgur.com/7YyZ6kP.png">
+
+<p>Entrevista con el MVP del torneo</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- GRID DE NOTICIAS -->
+
+<div class="news-grid">
+
+<div class="news-card" onclick="location.href='articulo.html'">
+
+<img src="https://i.imgur.com/7YyZ6kP.png">
+
+<div class="news-content">
+
 <h3>Nuevo torneo internacional</h3>
-<p>Participarán equipos de toda Latinoamérica.</p>
-</div>
 
-<div class="news" onclick="location.href='articulo.html'">
-<h3>Top goles de la semana</h3>
-<p>Las mejores jugadas del momento.</p>
+<p>Equipos de toda Latinoamérica participarán.</p>
+
 </div>
 
 </div>
+
+<div class="news-card" onclick="location.href='articulo.html'">
+
+<img src="https://i.imgur.com/7YyZ6kP.png">
+
+<div class="news-content">
+
+<h3>Ranking de jugadores</h3>
+
+<p>Los mejores del mes.</p>
+
+</div>
+
+</div>
+
+<div class="news-card" onclick="location.href='articulo.html'">
+
+<img src="https://i.imgur.com/7YyZ6kP.png">
+
+<div class="news-content">
+
+<h3>Consejos para mejorar</h3>
+
+<p>Guía para subir tu nivel en Haxball.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>HaxOlé © 2026 - Portal de noticias de Haxball</p>
+
+</footer>
 
 </body>
 </html>
