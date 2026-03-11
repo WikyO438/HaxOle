@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Noticias - HaxOlé</title>
+<title>Ligas - HaxOlé</title>
 
 <style>
 
@@ -16,7 +16,15 @@ margin:0;
 
 header{
 background:linear-gradient(90deg,#6ec6ff,#ffffff);
-padding:20px;
+padding:15px;
+}
+
+.header-container{
+width:90%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
@@ -24,7 +32,6 @@ display:flex;
 align-items:center;
 gap:10px;
 font-size:40px;
-font-weight:bold;
 color:black;
 text-decoration:none;
 }
@@ -33,23 +40,29 @@ text-decoration:none;
 width:35px;
 }
 
+nav a{
+margin:0 10px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
 .container{
-width:80%;
-margin:auto;
-margin-top:40px;
+width:90%;
+margin:30px auto;
 }
 
 .news{
 background:#1c1c1c;
 padding:20px;
 margin-bottom:20px;
-border-radius:6px;
+border-radius:8px;
 cursor:pointer;
 transition:0.3s;
 }
 
 .news:hover{
-transform:scale(1.03);
+transform:scale(1.02);
 }
 
 </style>
@@ -60,12 +73,23 @@ transform:scale(1.03);
 
 <header>
 
-<a href="index.html" class="logo">
+<div class="header-container">
 
+<a href="index.html" class="logo">
 <img src="logo.png">
 HaxOlé
-
 </a>
+
+<nav>
+<a href="noticias.html">Noticias</a>
+<a href="partidos.html">Partidos</a>
+<a href="ligas.html">Ligas</a>
+<a href="entrevistas.html">Entrevistas</a>
+<a href="opinion.html">Opinión</a>
+<a href="comunidad.html">Comunidad</a>
+</nav>
+
+</div>
 
 </header>
 
@@ -73,23 +97,17 @@ HaxOlé
 
 <h1>Ligas</h1>
 
-<div class="news" onclick="location.href='articulo.html'">
-<h3>Dream Tin campeón de la Hax League</h3>
-<p>El equipo ganó una final histórica.</p>
+<div class="news">
+<h3>Hax League temporada 2026</h3>
+<p>Los equipos ya se preparan para el torneo.</p>
 </div>
 
-<div class="news" onclick="location.href='articulo.html'">
-<h3>Nuevo torneo internacional</h3>
-<p>Participarán equipos de toda Latinoamérica.</p>
-</div>
-
-<div class="news" onclick="location.href='articulo.html'">
-<h3>Top goles de la semana</h3>
-<p>Las mejores jugadas del momento.</p>
+<div class="news">
+<h3>Nueva liga latinoamericana</h3>
+<p>Participarán equipos de 5 países.</p>
 </div>
 
 </div>
 
 </body>
 </html>
-```
